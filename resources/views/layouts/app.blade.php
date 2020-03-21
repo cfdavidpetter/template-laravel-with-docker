@@ -48,6 +48,20 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <img src="img/{{ config('app.locale') }}.png" alt="{{ config('app.locale') }}" style="width: 20px;margin-bottom: 5px;height: 15px;"> <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/set_locale/en">
+                                        <img src="img/en.png" alt="en" style="width: 20px;margin-bottom: 5px;height: 15px;"> {{ __('English') }}
+                                    </a>
+                                    <a class="dropdown-item" href="/set_locale/pt-BR">
+                                        <img src="img/pt-BR.png" alt="pt-BR" style="width: 20px;margin-bottom: 5px;height: 15px;"> {{ __('Portuguese') }}
+                                    </a>
+                                </div>
+                            </li>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
